@@ -58,32 +58,6 @@
 - **MITRE ATT&CK:** T1059.001 — Command and Scripting Interpreter: PowerShell / T1027 — Obfuscated Files or Information
 ---
 
-## 🔎 Detection Rules
-
-```splunk
-# Encoded Powershell Command Detected
-index=main
-sourcetype="WinEventLog:Microsoft-Windows-Sysmon/Operational"
-EventCode=1 CommandLine="*EncodedCommand*"
-
-# Mimikatz Execution Detected
-index=main
-sourcetype="WinEventLog:Microsoft-Windows-Sysmon/Operational"
-EventCode=1 Image="*mimikatz*"
-
-# SMB Brute Force Detected
-index=main
-sourcetype="WinEventLog:Security" EventCode=4625
-| stats count by host
-| where count > 3
-
-# Suspicious Service Created - Lateral Movement
-index=main
-sourcetype="WinEventLog:Microsoft-Windows-Sysmon/Operational"
-EventCode=1 ParentImage="*services.exe*" User="NT AUTHORITY\\SYSTEM"
-```
-
-
 ---
 
 ## Recommendations
@@ -103,12 +77,6 @@ EventCode=1 ParentImage="*services.exe*" User="NT AUTHORITY\\SYSTEM"
 - Attackers using legitimate tools (impacket, PowerShell) can still be detected through behavioral patterns in process creation logs
 - MITRE ATT&CK framework provides a structured way to map detections to real-world threat actor techniques
 - A layered detection approach combining Security logs and Sysmon gives the most comprehensive coverage
-
----
-
-## Full Report
-
-[📄 View Full PDF Report](report/SOC-Detection-Lab-Report.pdf)
 
 ---
 
