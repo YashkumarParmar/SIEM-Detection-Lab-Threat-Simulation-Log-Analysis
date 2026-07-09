@@ -60,7 +60,7 @@
 
 ---
 
-## Recommendations
+## 💡Recommendations
 
 | Attack | Defensive Recommendation |
 |--------|------------------------|
@@ -71,7 +71,7 @@
 
 ---
 
-## Key Takeaways
+## 🔑Key Takeaways
 
 - Sysmon with SwiftOnSecurity config provides significantly richer telemetry than default Windows logging
 - Attackers using legitimate tools (impacket, PowerShell) can still be detected through behavioral patterns in process creation logs
@@ -80,7 +80,16 @@
 
 ---
 
-## Connect
+## 📎 Resources & Full Report
+
+- 📄 **Full Report (PDF):** [View / Download](https://drive.google.com/file/d/1Ol81-vscjqm_oQ4LaJFDes88rWU2zbML/view?usp=sharing)
+- 🖼️ **Screenshot Gallery:** [Google Drive Folder](https://drive.google.com/drive/folders/14LJN1XP4M0YwLYZ2Wnqa9OE1hLCN6NcE?usp=sharing)
+
+> The gallery includes additional screenshots and evidence not featured in the main report.
+
+---
+
+## 🤝Connect
 
 **LinkedIn:** www.linkedin.com/in/yash-kumar-parmar  
 **Email:** yashparmar.contact@gmail.com
